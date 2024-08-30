@@ -1,6 +1,6 @@
-function calculateIceCreamCost(size, toppingsInput, shouldAddMarshmallow) {
-    if (shouldAddMarshmallow === void 0) { shouldAddMarshmallow = false; }
-    var cost = 0;
+"use strict";
+function calculateIceCreamCost(size, toppingsInput, shouldAddMarshmallow = false) {
+    let cost = 0;
     if (size === "small") {
         cost += 10;
     }
@@ -10,7 +10,7 @@ function calculateIceCreamCost(size, toppingsInput, shouldAddMarshmallow) {
     else {
         throw new Error("Invalid type selected");
     }
-    toppingsInput.split(",").forEach(function (topping) {
+    toppingsInput.split(",").forEach(topping => {
         if (topping === "1") {
             cost += 5;
         }
@@ -29,15 +29,15 @@ function calculateIceCreamCost(size, toppingsInput, shouldAddMarshmallow) {
     }
     return cost;
 }
-var size = validateInput(prompt("Enter size (small/large):"));
-var toppingsInput = validateInput(prompt("Choose toppings (at least one) from list:\n" +
+const size = validateInput(prompt("Enter size (small/large):"));
+const toppingsInput = validateInput(prompt("Choose toppings (at least one) from list:\n" +
     "\t1. Chocolate (+5 hrn);\n" +
     "\t2. Caramel (+6 hrn);\n" +
     "\t3. Berries (+10 hrn).\n" +
     "Enter comma-separated numbers:"));
-var shouldAddMarshmallow = confirm("Do you want to add marshmallow (+5 hrn)?");
-var totalCost = calculateIceCreamCost(size, toppingsInput, shouldAddMarshmallow);
-console.log("Total cost: ".concat(totalCost, " hrn"));
+const shouldAddMarshmallow = confirm("Do you want to add marshmallow (+5 hrn)?");
+const totalCost = calculateIceCreamCost(size, toppingsInput, shouldAddMarshmallow);
+console.log(`Total cost: ${totalCost} hrn`);
 function validateInput(object) {
     if (object == null) {
         throw new Error("Invalid input");

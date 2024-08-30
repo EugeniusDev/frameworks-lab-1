@@ -1,0 +1,13 @@
+"use strict";
+let myString = "Hello, World!";
+let myNumber = 42;
+let myBoolean = true;
+let myAny = "Anything!";
+let stringArray = ["Js", "Ts", "Vue"];
+let numberArray = [1, 2, 3];
+console.log(myString);
+console.log(myNumber);
+console.log(myBoolean);
+console.log(myAny);
+console.log(stringArray);
+console.log(numberArray);
