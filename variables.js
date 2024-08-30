@@ -1,0 +1,12 @@
+var myString = "Hello, World!";
+var myNumber = 42;
+var myBoolean = true;
+var myAny = "Anything!";
+var stringArray = ["Js", "Ts", "Vue"];
+var numberArray = [1, 2, 3];
+console.log(myString);
+console.log(myNumber);
+console.log(myBoolean);
+console.log(myAny);
+console.log(stringArray);
+console.log(numberArray);
